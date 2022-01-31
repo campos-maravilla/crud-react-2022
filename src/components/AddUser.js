@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import styles from './AddUser.module.css';
@@ -8,13 +9,18 @@ const AddUser = (props) => {
 
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
+    const [tarea, setTarea] = useState('');
+
+
 
 
     const onSubmit = (data, e) => {
         console.log(data);
         props.createUser(data);
 
-        e.target.reset();
+        //e.target.reset();
+        //setTarea(tarea)
+        reset();
     }
 
     return (
@@ -57,9 +63,10 @@ const AddUser = (props) => {
                 <div className={styles.error}>
                     {errors.nombreUsuario && <span >{errors.nombreUsuario.message}</span>}
                 </div>
-                <button className="mt-3 btn btn-primary btn-sm" > Agregar usuario</button>
+                <button className="mt-3 btn btn-primary btn-sm"> Agregar usuario</button>
+                {/*  <button type="button" className="mt-3 btn btn-primary btn-sm" onClick={() => reset()}> Limpiar</button> */}
             </form>
-        </div >
+        </div>
     )
 };
 
