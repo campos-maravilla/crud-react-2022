@@ -26,10 +26,10 @@ const AddUser = (props) => {
     return (
         <div className="" >
 
-            <form onSubmit={handleSubmit(onSubmit)} className="d-flex  flex-column justify-content-center sm  align-items-center">
-                <label>Nombre</label>
+            <form onSubmit={handleSubmit(onSubmit)} className="">
+                <label className="text-center d-block">Nombre</label>
                 <input type="text" name="nombre"
-
+                    className="mt-3 text-center d-block m-auto"
                     {...register("nombre", {
                         required: {
                             value: true,
@@ -44,9 +44,9 @@ const AddUser = (props) => {
                 <div className={styles.error}>
                     {errors.nombre && <span >{errors.nombre.message}</span>}
                 </div>
-                <label>Nombre de Usuario</label>
+                <label className="text-center d-block">Nombre de Usuario</label>
                 <input type="text" name="nombeUsuario"
-                    className="mt-3"
+                    className="mt-3 text-center d-block m-auto"
                     {...register("nombreUsuario", {
                         required: {
                             value: true,
@@ -60,10 +60,10 @@ const AddUser = (props) => {
                     }
 
                 />
-                <div className={styles.error}>
+                <div className={styles.error} >
                     {errors.nombreUsuario && <span >{errors.nombreUsuario.message}</span>}
                 </div>
-                <button className="mt-3 btn btn-primary btn-sm"> Agregar usuario</button>
+                <button className="btn btn-primary  m-auto d-block"> Agregar usuario</button>
                 {/*  <button type="button" className="mt-3 btn btn-primary btn-sm" onClick={() => reset()}> Limpiar</button> */}
             </form>
         </div>

@@ -28,10 +28,10 @@ const EditForm = (props) => {
     return (
         <div className="m-auto w-40" >
 
-            <form onSubmit={handleSubmit(onSubmit)} className="d-flex align-items-start flex-column">
-                <label>Nombre</label>
+            <form onSubmit={handleSubmit(onSubmit)} >
+                <label className="text-center d-block">Nombre</label>
                 <input type="text" name="nombre"
-
+                    className="mt-3 text-center d-block m-auto"
                     {...register("nombre", {
                         required: {
                             value: true,
@@ -46,8 +46,9 @@ const EditForm = (props) => {
                 <div className={styles.error}>
                     {errors.nombre && <span >{errors.nombre.message}</span>}
                 </div>
+                <label className="text-center d-block">Nombre usuario</label>
                 <input type="text" name="nombeUsuario"
-                    className="mt-3"
+                    className="mt-3 text-center d-block m-auto"
                     {...register("nombreUsuario", {
                         required: {
                             value: true,
@@ -64,7 +65,7 @@ const EditForm = (props) => {
                 <div className={styles.error}>
                     {errors.nombreUsuario && <span >{errors.nombreUsuario.message}</span>}
                 </div>
-                <button className="mt-3 btn btn-primary" > Editar nuevo usuario</button>
+                <button className="mt-3 btn btn-primary m-auto d-block" > Editar nuevo usuario</button>
             </form>
         </div>
     )

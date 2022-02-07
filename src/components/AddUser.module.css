@@ -2,5 +2,11 @@
     font-weight: 200;
     font-size: 1rem;
     color: #d00;
+    margin-top: 3;
+    text-align: center;
 
+}
+
+div {
+    margin-top: 5px;
 }

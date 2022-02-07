@@ -47,13 +47,13 @@ const CrudApp = () => {
         setUser(users.map(user => (user.id === id ? modificarUsuario : user)))
     }
     return (
-        <div className="container ">
+        <div className="container">
             <h1 className="text-center">Crud App</h1>
-            <div className="row ms-auto">
-                <div className="col-sm-6 col-lg-5 ">
+            <div className="row d-flex justify-content-center">
+                <div className="col-md-6  ">
                     {editar ? (
                         <div>
-                            <h2>Editar Usuario</h2>
+                            <h2 className="text-center">Editar Usuario</h2>
                             <EditForm actualizarUsuario={actualizarUsuario}
                                 modificarUsuario={modificarUsuario}
                             />
@@ -62,7 +62,7 @@ const CrudApp = () => {
                     ) : (
                         <div>
 
-                            <h2 className="text-center">Agregar Usuario</h2>
+                            <h3 className="text-center">Agregar Usuario</h3>
                             <AddUser createUser={createUser} />
                         </div>
                     )
@@ -71,9 +71,9 @@ const CrudApp = () => {
                 </div>
 
                 <div className="row m-auto">
-                    <div className="col-6">
+                    <div className="col-12">
 
-                        Ver usuario
+                        <h3 className="text-center text-nowrap">Lista de Usuarios</h3>
                         <UserTable users={users}
                             deleteUser={deleteUser}
                             editarFila={editarFila}
@@ -81,12 +81,7 @@ const CrudApp = () => {
                         />
                     </div>
 
-                    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-                    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-                    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-                    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-                    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-                    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
 
                 </div>
             </div>

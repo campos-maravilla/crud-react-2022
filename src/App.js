@@ -1,9 +1,9 @@
 
-import TaskForm from './components/TaskForm';
+
 import { useState } from 'react';
-import TasksTable from './components/TasksTable';
+
 import CrudApp from './components/CrudApp';
-import Modals from './components/Modals';
+
 
 
 const InitialTodo = [
@@ -38,9 +38,7 @@ function App() {
 
   return (
     <div className="container">
-      {/*  <Modals />
-      <TaskForm CreateTask={CreateTask} /> */}
-      <TasksTable Newtask={listTodo} eliminarTarea={eliminarTarea} />
+
       <hr />
       <CrudApp />
     </div>
